@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
 import PostBody from "@/components/PostBody";
+import ShareButtons from "@/components/ShareButtons";
 import {
   getPost,
   getPostSlugs,
@@ -125,6 +126,8 @@ export default async function ArticlePage({ params }: Props) {
         <h1 className="zf-article__title">{post.title}</h1>
         <p className="zf-article__excerpt">{post.excerpt}</p>
 
+        <ShareButtons url={canonical} title={post.title} />
+
         {heroImg && (
           <div className="zf-article__hero-img">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -133,6 +136,10 @@ export default async function ArticlePage({ params }: Props) {
         )}
 
         {post.body?.length > 0 && <PostBody body={post.body} />}
+
+        {post.body?.length > 0 && (
+          <ShareButtons url={canonical} title={post.title} />
+        )}
 
         {(post.tags?.length ?? 0) > 0 && (
           <div className="zf-article__tags">

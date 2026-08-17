@@ -1502,6 +1502,40 @@ button {
   color: rgba(22, 19, 15, 0.65);
 }
 
+.zf-share {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.zf-share__label {
+  font-family: var(--font-fragment), monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(22, 19, 15, 0.45);
+  margin-right: 4px;
+}
+
+.zf-share__btn {
+  font-family: var(--font-fragment), monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(22, 19, 15, 0.25);
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: rgba(22, 19, 15, 0.7);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.zf-share__btn:hover {
+  border-color: var(--zf-accent);
+  color: var(--zf-ink);
+}
+
 .zf-article__hero-img {
   margin-top: 44px;
   border-radius: 4px;
@@ -2002,5 +2036,6 @@ button {
   .zf-profile__grid {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
   }
 }
