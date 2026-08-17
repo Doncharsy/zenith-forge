@@ -5,6 +5,7 @@ import {
   siteName,
   siteTagline,
   siteDescription,
+  siteKeywords,
   twitterHandle,
   verification,
 } from "@/lib/site";
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     template: `%s · ${siteName}`,
   },
   description: siteDescription,
+  keywords: siteKeywords,
   applicationName: siteName,
   alternates: {
     canonical: "/",

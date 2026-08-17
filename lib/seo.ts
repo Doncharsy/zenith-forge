@@ -10,6 +10,18 @@ export function organizationSchema() {
     url: siteUrl,
     logo: `${siteUrl}/icon.svg`,
     description: siteDescription,
+    areaServed: {
+      "@type": "City",
+      name: "Abuja, Nigeria",
+    },
+    knowsAbout: [
+      "Web development",
+      "App development",
+      "Tech consulting",
+      "AI automation",
+      "AI agents",
+      "Data analysis",
+    ],
     sameAs: [socials.twitter, socials.linkedin, socials.instagram],
   };
 }

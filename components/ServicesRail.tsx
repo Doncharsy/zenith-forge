@@ -222,7 +222,7 @@ export default function ServicesRail() {
       >
         <div className="zf-rail__header">
           <div className="zf-rail__eyebrow">01 · WHAT WE FORGE</div>
-          <div className="zf-rail__title">Eight disciplines. One studio.</div>
+          <div className="zf-rail__title">Eight disciplines. One team.</div>
         </div>
 
         <div ref={trackRef} className="zf-rail__track">

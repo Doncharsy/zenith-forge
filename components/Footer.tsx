@@ -26,6 +26,9 @@ export default function Footer({ flat = false }: { flat?: boolean }) {
         <a href={socials.instagram} className="zf-footer__link">
           INSTAGRAM
         </a>
+        <Link href="/privacy" className="zf-footer__link">
+          PRIVACY POLICY
+        </Link>
       </div>
       <div className="zf-footer__copy">© 2026 ZENITH FORGE</div>
     </div>

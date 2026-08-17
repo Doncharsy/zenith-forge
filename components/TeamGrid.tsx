@@ -8,7 +8,7 @@ export default function TeamGrid() {
     <div id="team" className="zf-team">
       <Reveal className="zf-section-header" style={{ marginBottom: 56 }}>
         <div className="zf-eyebrow">03 · THE FORGEMASTERS</div>
-        <div className="zf-team__title">Five makers, one forge.</div>
+        <div className="zf-team__title">The Specialists.</div>
       </Reveal>
       <div className="zf-team__grid">
         {team.map((m) => (

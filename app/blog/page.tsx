@@ -5,6 +5,7 @@ import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import Reveal from "@/components/Reveal";
+import ArticleList from "@/components/ArticleList";
 import { getAllPosts, formatPostDate } from "@/lib/sanity/queries";
 import { resolveImage } from "@/lib/sanity/image";
 import { siteUrl } from "@/lib/site";
@@ -87,28 +88,7 @@ export default async function BlogPage() {
       )}
 
       <div className="zf-articles">
-        <Reveal className="zf-articles__count">
-          ALL ARTICLES · {rest.length}
-        </Reveal>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {rest.map((p, i) => (
-            <Reveal key={p._id} delay={(i % 4) * 0.06}>
-              <Link
-                href={`/blog/${p.slug}`}
-                className={`zf-article-row${i === rest.length - 1 ? " zf-article-row--last" : ""}`}
-              >
-                <span className="zf-article-row__num hide-mobile">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="zf-row__category">
-                  {p.category?.title ?? "ARTICLE"}
-                </span>
-                <span className="zf-article-row__title">{p.title}</span>
-                <span className="zf-row__date">{formatPostDate(p.publishedAt)}</span>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
+        <ArticleList posts={rest} />
       </div>
 
       <Newsletter variant="light" />

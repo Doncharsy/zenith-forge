@@ -19,17 +19,34 @@ export const socials = {
 /** Twitter/X handle (without @) for Twitter card metadata. */
 export const twitterHandle = "@zenithforgestudio";
 
-export const contactEmail = "zenithforgehq@gmail.com";
-export const contactPhone = "+2347050410235";
+export const contactEmail = "info@zenithforgestudio.com";
+export const contactPhone = "+234 916 542 3612";
 /** For tel: links. */
-export const contactPhoneHref = "+2347050410235";
+export const contactPhoneHref = "+2349165423612";
 /** "Book a call" destination. WhatsApp for now; swap for a Calendly/Cal.com URL when ready. */
-export const bookingUrl = "https://wa.me/2347050410235";
+export const bookingUrl = "https://wa.me/2349165423612";
 
 export const siteName = "Zenith Forge";
-export const siteTagline = "Digital studio for the web, AI and data";
+export const siteTagline = "Tech company and consultants for web and app development";
 export const siteDescription =
-  "We forge websites, agents and pipelines for startups that move fast. Web development, web design, AI automation, AI agents, data analysis, mobile, WordPress and SEO.";
+  "Zenith Forge is a tech company and consultancy of web developers and app developers based in Abuja, Nigeria. We build websites, mobile apps, AI agents and data pipelines, and we help founders figure out how to build an app or website the right way.";
+
+/** Target search terms for metadata; intentionally steers away from "studio" toward tech company / consultant / local-service intent. */
+export const siteKeywords = [
+  "tech company",
+  "tech consultant",
+  "software consultant",
+  "how to build an app",
+  "how to build a website",
+  "web development",
+  "app development",
+  "web developers in Abuja",
+  "app developers in Abuja",
+  "website design Abuja",
+  "AI automation",
+  "AI agents",
+  "data analysis",
+];
 
 /** Search-console verification tokens (set in env when you claim the property). */
 export const verification = {

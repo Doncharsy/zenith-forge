@@ -353,6 +353,13 @@ button {
   letter-spacing: -0.02em;
 }
 
+@media (max-width: 940px) {
+  .zf-hero__statement {
+    text-align: left;
+    padding: 0 36px;
+  }
+}
+
 .zf-hero__keep-scrolling {
   margin-top: 36px;
   display: flex;
@@ -1392,6 +1399,42 @@ button {
   margin-bottom: 8px;
 }
 
+.zf-articles__empty {
+  padding: 40px 0;
+  color: rgba(22, 19, 15, 0.5);
+}
+
+.zf-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.zf-filter__pill {
+  font-family: var(--font-fragment), monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(22, 19, 15, 0.25);
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: rgba(22, 19, 15, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.zf-filter__pill:hover {
+  border-color: rgba(22, 19, 15, 0.5);
+  color: var(--zf-ink);
+}
+
+.zf-filter__pill.is-active {
+  background: var(--zf-accent);
+  border-color: var(--zf-accent);
+  color: var(--zf-paper);
+}
+
 .zf-article-row {
   display: grid;
   grid-template-columns: 56px 130px 1fr auto;
@@ -1938,6 +1981,15 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+
+  .zf-team__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .zf-profile__photo {
+    max-width: none;
   }
 }
 

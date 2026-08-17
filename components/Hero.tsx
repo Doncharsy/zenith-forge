@@ -64,7 +64,7 @@ export default function Hero() {
         </div>
 
         <div data-depth="1" className="zf-hero__layer zf-hero__center">
-          <div className="zf-hero__kicker">DIGITAL STUDIO · WEB · AI · DATA</div>
+          <div className="zf-hero__kicker">TECH COMPANY · WEB · AI · DATA</div>
           <div className="zf-hero__word">ZENITH</div>
           <div className="zf-hero__word zf-hero__word--accent">FORGE</div>
           <div className="zf-hero__tagline">
