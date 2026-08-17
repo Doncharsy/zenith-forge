@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Zenith Forge, digital studio for the web, AI and data";
+export const alt = "Zenith Forge, tech company and consultancy for the web, AI and data";
 
 /** Default social share image, used when a page has no specific OG image. */
 export default function OpengraphImage() {

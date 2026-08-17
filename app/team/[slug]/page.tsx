@@ -6,6 +6,7 @@ import Cursor from "@/components/Cursor";
 import TeamPhoto from "@/components/TeamPhoto";
 import { team, getMember } from "@/lib/team";
 import { socials, contactEmail, bookingUrl } from "@/lib/site";
+import { personSchema } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -29,10 +30,16 @@ export default async function ProfilePage({ params }: Props) {
   const m = getMember(slug);
   if (!m) notFound();
 
+  const jsonLd = personSchema(m);
+
   return (
     <>
       <Cursor />
       <Nav solid />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <div className="zf-profile">
         <Link href="/#team" className="zf-profile__back">

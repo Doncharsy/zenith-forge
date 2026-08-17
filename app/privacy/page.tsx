@@ -8,8 +8,9 @@ import { contactEmail } from "@/lib/site";
 const legalName = "Zenith Forge LTD";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: `How ${legalName} collects, uses and protects your data, including newsletter signups.`,
+  title: "Does My Website Need a Privacy Policy?",
+  description:
+    "Short answer: yes, if you collect any personal data at all, even just an email address. Here's what that means in practice, plus Zenith Forge LTD's own privacy policy for zenithforgestudio.com.",
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
 };
@@ -32,6 +33,24 @@ export default function PrivacyPage() {
         </p>
 
         <div className="zf-prose">
+          <h2>Does my website need a privacy policy?</h2>
+          <p>
+            Short answer: almost certainly yes. If your site or app collects any personal
+            data at all, even just an email address through a newsletter or contact form,
+            you need a privacy policy under laws like Nigeria&apos;s Data Protection Act
+            and, if you have users in Europe, GDPR. It is one of a small stack of
+            compliance documents most sites end up needing; we cover the rest, including
+            terms of service, cookie consent, and app store requirements, in{" "}
+            <Link href="/blog/your-site-is-live-is-it-legal">
+              Your Site Is Live. Is It Legal?
+            </Link>
+            .
+          </p>
+          <p>
+            Below is our own privacy policy for zenithforgestudio.com, which doubles as a
+            plain-language example of what one should actually cover.
+          </p>
+
           <h2>Who we are</h2>
           <p>
             {legalName} (&ldquo;Zenith Forge&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;,

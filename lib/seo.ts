@@ -1,5 +1,12 @@
 import type { PortableTextBlock } from "@portabletext/react";
-import { siteUrl, siteName, siteDescription, socials } from "./site";
+import {
+  siteUrl,
+  siteName,
+  siteDescription,
+  socials,
+  contactEmail,
+  contactPhoneHref,
+} from "./site";
 
 /** Site-wide Organization schema — helps Google build a knowledge panel. */
 export function organizationSchema() {
@@ -23,6 +30,58 @@ export function organizationSchema() {
       "Data analysis",
     ],
     sameAs: [socials.twitter, socials.linkedin, socials.instagram],
+  };
+}
+
+/**
+ * LocalBusiness (ProfessionalService) schema — signals a real, locatable
+ * business to Google for local-pack / "near me" style results. No street
+ * address is published, so this stays at city level.
+ */
+export function localBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: siteName,
+    url: siteUrl,
+    image: `${siteUrl}/opengraph-image`,
+    logo: `${siteUrl}/icon.svg`,
+    description: siteDescription,
+    email: contactEmail,
+    telephone: contactPhoneHref,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Abuja",
+      addressRegion: "FCT",
+      addressCountry: "NG",
+    },
+    areaServed: [
+      { "@type": "City", name: "Abuja, Nigeria" },
+      { "@type": "Country", name: "Nigeria" },
+    ],
+    sameAs: [socials.twitter, socials.linkedin, socials.instagram],
+  };
+}
+
+/** Person schema for a team profile page — backs up an Article's named author with real credentials. */
+export function personSchema(member: {
+  name: string;
+  profileRole: string;
+  slug: string;
+  bio1: string;
+  photo?: string;
+  linkedin?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: member.name,
+    jobTitle: member.profileRole,
+    url: `${siteUrl}/team/${member.slug}`,
+    description: member.bio1,
+    ...(member.photo ? { image: `${siteUrl}${member.photo}` } : {}),
+    ...(member.linkedin ? { sameAs: [member.linkedin] } : {}),
+    worksFor: { "@type": "Organization", name: siteName, url: siteUrl },
   };
 }
 

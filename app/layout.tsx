@@ -9,7 +9,7 @@ import {
   twitterHandle,
   verification,
 } from "@/lib/site";
-import { organizationSchema, webSiteSchema } from "@/lib/seo";
+import { organizationSchema, webSiteSchema, localBusinessSchema } from "@/lib/seo";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -74,6 +74,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
         />
         <script
           type="application/ld+json"

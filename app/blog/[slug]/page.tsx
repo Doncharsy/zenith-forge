@@ -75,7 +75,11 @@ export default async function ArticlePage({ params }: Props) {
     ...(post.category ? { articleSection: post.category.title } : {}),
     ...(post.tags?.length ? { keywords: post.tags.join(", ") } : {}),
     ...(words ? { wordCount: words } : {}),
-    author: { "@type": "Organization", name: siteName, url: siteUrl },
+    author: {
+      "@type": "Person",
+      name: "Ochasi Darlington",
+      url: `${siteUrl}/team/ochasi-darlington`,
+    },
     publisher: {
       "@type": "Organization",
       name: siteName,
