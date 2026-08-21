@@ -85,7 +85,7 @@ export default async function ArticlePage({ params }: Props) {
       "@type": "Organization",
       name: siteName,
       url: siteUrl,
-      logo: { "@type": "ImageObject", url: `${siteUrl}/icon.svg` },
+      logo: { "@type": "ImageObject", url: `${siteUrl}/icon1.png` },
     },
   };
 

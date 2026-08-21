@@ -15,7 +15,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: siteName,
     url: siteUrl,
-    logo: `${siteUrl}/icon.svg`,
+    logo: `${siteUrl}/icon1.png`,
     description: siteDescription,
     areaServed: {
       "@type": "City",
@@ -45,7 +45,7 @@ export function localBusinessSchema() {
     name: siteName,
     url: siteUrl,
     image: `${siteUrl}/opengraph-image`,
-    logo: `${siteUrl}/icon.svg`,
+    logo: `${siteUrl}/icon1.png`,
     description: siteDescription,
     email: contactEmail,
     telephone: contactPhoneHref,
